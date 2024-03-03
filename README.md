@@ -1,45 +1,108 @@
 ## Deploy JSON Server to Vercel
 
-A template to deploy [JSON Server](https://github.com/typicode/json-server) to [Vercel](https://vercel.com), allow you to run fake REST API online!
 
-Demo from this repository: 
-
-1. https://json-server-in.vercel.app
-2. https://json-server-in.vercel.app/api/posts
-
-![Powered by Vercel](https://images.ctfassets.net/e5382hct74si/78Olo8EZRdUlcDUFQvnzG7/fa4cdb6dc04c40fceac194134788a0e2/1618983297-powered-by-vercel.svg)
-
-### How to use
-
-1. Click "**Use this template**" or clone this repository.
-2. Update or use the default [`db.json`](./db.json) in the repository.
-3. Sign Up or login into [Vercel](https://vercel.com).
-4. From the Vercel dashboard, click "**+ New Project**" then "**Import**" your repository.
-5. In the "**Configure Project**" screen, leave everything default and click "**Deploy**".
-6. Wait until deployment is done, and your own JSON server is ready to serve!
-
-## Default `db.json`
+## Default `API COFFEE DELIVERY`
 
 ```json
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+  "products": [
+    {
+      "id": 1,
+      "name": "Expresso Tradicional",
+      "price": 9.90,
+      "type": ["TRADICIONAL"],
+      "description": "O tradicional café feito com água quente e grãos moídos"
+    },
+    {
+      "id": 2,
+      "name": "Expresso Americano",
+      "price": 9.90,
+      "type": ["TRADICIONAL"],
+      "description": "Expresso diluído, menos intenso que o tradicional"
+    },
+    {
+      "id": 3,
+      "name": "Expresso Cremoso",
+      "price": 9.90,
+      "type": ["TRADICIONAL"],
+      "description": "Café expresso tradicional com espuma cremosa"
+    },
+    {
+      "id": 4,
+      "name": "Expresso Gelado",
+      "price": 9.90,
+      "type": ["TRADICIONAL", "COM LEITE"],
+      "description": "Bebida preparada com café expresso e cubos de gelo"
+    },
+    {
+      "id": 5,
+      "name": "Café com Leite",
+      "price": 9.90,
+      "type": ["TRADICIONAL", "COM LEITE"],
+      "description": "Meio a meio de expresso tradicional com leite vaporizado"
+    },
+    {
+      "id": 6,
+      "name": "Latte",
+      "price": 9.90,
+      "type": ["TRADICIONAL", "COM LEITE"],
+      "description": "Uma dose de café expresso com o dobro de leite e espuma cremosa"
+    },
+    {
+      "id": 7,
+      "name": "Capuccino",
+      "price": 9.90,
+      "type": ["TRADICIONAL", "COM LEITE"],
+      "description": "Bebida com canela feita de doses iguais de café, leite e espuma"
+    },
+    {
+      "id": 8,
+      "name": "Macchiato",
+      "price": 9.90,
+      "type": ["TRADICIONAL", "COM LEITE"],
+      "description": "Café expresso misturado com um pouco de leite quente e espuma"
+    },
+    {
+      "id": 9,
+      "name": "Mocaccino",
+      "price": 9.90,
+      "type": ["TRADICIONAL", "COM LEITE"],
+      "description": "Café expresso com calda de chocolate, pouco leite e espuma"
+    },
+    {
+      "id": 10,
+      "name": "Chocolate Quente",
+      "price": 9.90,
+      "type": ["ESPECIAL", "COM LEITE"],
+      "description": "Bebida feita com chocolate dissolvido no leite quente e café"
+    },
+    {
+      "id": 11,
+      "name": "Cubano",
+      "price": 9.90,
+      "type": ["ESPECIAL", "ALCOÓLICO", "GELADO"],
+      "description": "Drink gelado de café expresso com rum, creme de leite e hortelã"
+    },
+    {
+      "id": 12,
+      "name": "Havaiano",
+      "price": 9.90,
+      "type": ["ESPECIAL"],
+      "description": "Bebida adocicada preparada com café e leite de coco"
+    },
+    {
+      "id": 13,
+      "name": "Árabe",
+      "price": 9.90,
+      "type": ["ESPECIAL"],
+      "description": "Bebida preparada com grãos de café árabe e especiarias"
+    },
+    {
+      "id": 14,
+      "name": "Irlandês",
+      "price": 9.90,
+      "type": ["ESPECIAL", "ALCOÓLICO"],
+      "description": "Bebida a base de café, uísque irlandês, açúcar e chantilly"
+    }
+  ]
 }
-```
-
-## Enable write operations
-
-By default, only GET operation is allowed, thanks to the contribution by [@VicAv99](https://www.github.com/VicAv99) at [#6](https://github.com/kitloong/json-server-vercel/issues/6), we can now enable write operations as well.
-
-You can find the example code in [`api/server.js`](./api/server.js).
-
-## Reference
-
-1. https://github.com/typicode/json-server
-2. https://vercel.com
-3. https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel
